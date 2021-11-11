@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ado.net_prac.Models.ProductModel>
+@{
+    ViewBag.Title = "Product";
+}
+<h2>Welcome &nbsp;<span>@Session["Name"]</span></h2>
+<h3>Product</h3>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Qauntity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var items in Model)
+            {
+            <tr>
+                <td>@items.Id</td>
+                <td>@items.ProductName</td>
+                <td>@items.Price</td>
+                <td>@items.Qauntity</td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+
